@@ -9,7 +9,7 @@ The homework will be based on this project named "Expense Tracker",where users w
 
 3. Run ```ant compile``` to generate the class files. Compiled classes will be in the bin directory.
 
-4. Run ```ant test``` to compile all unit tests and run them.
+4. Run ```ant test``` to compile all unit tests and run them.   
 
 ## How to run (from Terminal):
 After building the project (i.e., running ant), run: ```java -cp bin ExpenseTrackerApp```
