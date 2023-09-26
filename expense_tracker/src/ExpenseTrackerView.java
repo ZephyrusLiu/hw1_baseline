@@ -130,6 +130,7 @@ public class ExpenseTrackerView extends JFrame {
   
   // Other view methods
   // Show error to user.
+  // Helper method of todo 5
   public void showError(String message) {
     JOptionPane.showMessageDialog(this, message, "Error", JOptionPane.ERROR_MESSAGE);
   }
