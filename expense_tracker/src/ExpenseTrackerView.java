@@ -128,7 +128,9 @@ public class ExpenseTrackerView extends JFrame {
     refresh();
   }
   
-
-
   // Other view methods
+  // Show error to user.
+  public void showError(String message) {
+    JOptionPane.showMessageDialog(this, message, "Error", JOptionPane.ERROR_MESSAGE);
+  }
 }
