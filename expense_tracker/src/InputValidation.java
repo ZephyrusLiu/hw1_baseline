@@ -13,9 +13,9 @@ public class InputValidation {
 
         // Updated version for todo 2.
         // Check if the input "amount" is not a number
-        // if(Double.isNaN(amount)){
-        //     throw new IllegalArgumentException("Amount is not a valid number.");
-        // }
+        if(Double.isNaN(amount)){
+            throw new IllegalArgumentException("Amount is not a valid number.");
+        }
         
         // UPdate: Todo 2 has been added to a preprocess step at ExpenseTrackerView.java line 33.
 
