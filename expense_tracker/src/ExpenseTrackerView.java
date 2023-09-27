@@ -34,6 +34,7 @@ public class ExpenseTrackerView extends JFrame {
       else{
         // Show dialog to user when catch error.
         JOptionPane.showMessageDialog(this, "Amount is not a valid number", "Error", JOptionPane.ERROR_MESSAGE);
+        // Clear invalid input
         amountField.setText("");
         throw new IllegalArgumentException("Amount is not a valid number.");
       }
