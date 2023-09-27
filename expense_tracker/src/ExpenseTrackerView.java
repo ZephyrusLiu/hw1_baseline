@@ -28,6 +28,7 @@ public class ExpenseTrackerView extends JFrame {
       // Make sure the input data type is number/double only.
       if(amountField.getText().matches("-?\\d+(\\.\\d+)?")){
         double amount = Double.parseDouble(amountField.getText());
+        amountField.setText("");
         return amount;
       }
       else{
@@ -43,7 +44,9 @@ public class ExpenseTrackerView extends JFrame {
   }
 
   public String getCategoryField() {
-    return categoryField.getText();
+    String category = categoryField.getText();
+    categoryField.setText("");
+    return category;
   }
 
   public void setCategoryField(JTextField categoryField) {
