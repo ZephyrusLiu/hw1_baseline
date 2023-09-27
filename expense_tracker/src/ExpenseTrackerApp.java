@@ -26,7 +26,7 @@ public class ExpenseTrackerApp {
       
       // Get transaction data from view
       double amount = view.getAmountField(); 
-      String category = view.getCategoryField();
+      String category = view.getCategoryField().toLowerCase();
 
       // Store error message
       String errorMessage = null;
