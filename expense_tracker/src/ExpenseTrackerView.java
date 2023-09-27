@@ -28,14 +28,14 @@ public class ExpenseTrackerView extends JFrame {
       // Make sure the input data type is number/double only.
       if(amountField.getText().matches("-?\\d+(\\.\\d+)?")){
         double amount = Double.parseDouble(amountField.getText());
-        amountField.setText("");
+        // amountField.setText("");
         return amount;
       }
       else{
         // Show dialog to user when catch error.
         JOptionPane.showMessageDialog(this, "Amount is not a valid number", "Error", JOptionPane.ERROR_MESSAGE);
-        // Clear invalid input
-        amountField.setText("");
+        // // Clear invalid input
+        // amountField.setText("");
         throw new IllegalArgumentException("Amount is not a valid number.");
       }
     }
@@ -47,7 +47,7 @@ public class ExpenseTrackerView extends JFrame {
 
   public String getCategoryField() {
     String category = categoryField.getText();
-    categoryField.setText("");
+    // categoryField.setText("");
     return category;
   }
 
