@@ -20,12 +20,21 @@ public class ExpenseTrackerView extends JFrame {
     return transactionsTable;
   }
 
-  public double getAmountField() {
+  public double getAmountField() throws IllegalArgumentException{
     if(amountField.getText().isEmpty()) {
       return 0;
-    }else {
-    double amount = Double.parseDouble(amountField.getText());
-    return amount;
+    }
+    else {
+      // Make sure the input data type is number/double only.
+      if(amountField.getText().matches("-?\\d+(\\.\\d+)?")){
+        double amount = Double.parseDouble(amountField.getText());
+        return amount;
+      }
+      else{
+        // Show dialog to user when catch error.
+        JOptionPane.showMessageDialog(this, "Amount is not a valid number", "Error", JOptionPane.ERROR_MESSAGE);
+        throw new IllegalArgumentException("Amount is not a valid number.");
+      }
     }
   }
 
